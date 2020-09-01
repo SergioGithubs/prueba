@@ -65,7 +65,8 @@ httpsServer .createServer(function(request, response) {
 
 const WebSocket = require('ws')
 
-const wss = new WebSocket.Server({ server: httpsServer , port: 777 })
+// const wss = new WebSocket.Server({ server: httpsServer , port: 777 })
+const wss = new WebSocket.Server({ server: httpsServer })
 
 wss.on('connection', ws => {
   console.log(`Conected`);
