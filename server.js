@@ -1,11 +1,13 @@
 var http = require("http");
 
+const port = process.env.PORT || 8080;
+
 http.createServer(function(request, response) {
   response.writeHead(200, {"Content-Type": "text/html"});
   response.write(process.version);
-  response.write("Hola Mundo 2");
+  response.write(port);
   response.end();
-}).listen(80);
+}).listen(port);
 
 
 
