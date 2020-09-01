@@ -1,13 +1,13 @@
-var http = require("http");
+// var http = require("http");
 
-const port = process.env.PORT || 8080;
+// const port = process.env.PORT || 8080;
 
-http.createServer(function(request, response) {
-  response.writeHead(200, {"Content-Type": "text/html"});
-  response.write(process.version);
-  response.write(port);
-  response.end();
-}).listen(port);
+// http.createServer(function(request, response) {
+//   response.writeHead(200, {"Content-Type": "text/html"});
+//   response.write(process.version);
+//   response.write(port);
+//   response.end();
+// }).listen(port);
 
 
 
@@ -52,13 +52,16 @@ http.createServer(function(request, response) {
 
 
 
-/*
+
+const port = process.env.PORT || 8080;
 const httpsServer  = require('http')
 httpsServer .createServer(function(request, response) {
   response.writeHead(200, {"Content-Type": "text/html"});
   response.write("Hola Mundo");
+  response.write(process.version);
+  response.write("Puerto: " + port);
   response.end();
-}).listen(8888);
+}).listen(port);
 
 const WebSocket = require('ws')
 
@@ -76,7 +79,7 @@ wss.on('connection', ws => {
   })
   ws.send('ho!')
 })
-*/
+
 
 
 
