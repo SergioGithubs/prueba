@@ -1,11 +1,11 @@
-// var http = require("http");
+var http = require("http");
 
-// http.createServer(function(request, response) {
-//   response.writeHead(200, {"Content-Type": "text/html"});
-//   response.write(process.version);
-//   response.write("Hola Mundo 2");
-//   response.end();
-// }).listen(8080);
+http.createServer(function(request, response) {
+  response.writeHead(200, {"Content-Type": "text/html"});
+  response.write(process.version);
+  response.write("Hola Mundo 2");
+  response.end();
+}).listen(80);
 
 
 
@@ -50,7 +50,7 @@
 
 
 
-  
+/*
 const httpsServer  = require('http')
 httpsServer .createServer(function(request, response) {
   response.writeHead(200, {"Content-Type": "text/html"});
@@ -74,6 +74,7 @@ wss.on('connection', ws => {
   })
   ws.send('ho!')
 })
+*/
 
 
 
