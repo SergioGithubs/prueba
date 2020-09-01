@@ -55,7 +55,8 @@
 
 const port = process.env.PORT || 8080;
 const httpsServer  = require('http')
-httpsServer .createServer(function(request, response) {
+// httpsServer .createServer(function(request, response) {
+const servidor = httpsServer .createServer(function(request, response) {
   response.writeHead(200, {"Content-Type": "text/html"});
   response.write("Hola Mundo");
   response.write(process.version);
@@ -66,7 +67,7 @@ httpsServer .createServer(function(request, response) {
 const WebSocket = require('ws')
 
 // const wss = new WebSocket.Server({ server: httpsServer , port: 777 })
-const wss = new WebSocket.Server({ server: httpsServer })
+const wss = new WebSocket.Server({ server: servidor })
 
 wss.on('connection', ws => {
   console.log(`Conected`);
